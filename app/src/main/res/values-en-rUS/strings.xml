@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScanBarApp</string>
+    <string name="bienvenido">Welcome to ScanBarApp</string>
+    <string name="iniciar_sesi_n">Login</string>
+    <string name="al_momento_de_iniciar_sesio_n_tendras_acceso_a_todas_nuestras_vistas_disponibles">
+        At the time of logging in you will have access to all our available views.</string>
+    <string name="has_olvidado_tu_contrase_a">Have you forgotten your password?</string>
+    <string name="contrase_a">Password</string>
+    <string name="correo_electr_nico">Email</string>
+    <string name="no_tienes_cuenta_nregistrate">Don\'t have an account? \nSign Up</string>
+    <string name="posees_una_cuenta_ninicia_sesi_n">Have an account? \nSign In</string>
+    <string name="todo">All</string>
+    <string name="salir">LogOut</string>
+    <string name="agregar_nproducto">Add \nProduct</string>
+    <string name="borrar_nproducto">Delete \nProduct</string>
+    <string name="usuario">User</string>
+    <string name="buscar_nproducto">Search \nProduct</string>
+    <string name="ver_ninventario">View \nInventory</string>
+    <string name="scanbarapp_es_un_proyecto_el_cual_facilita_el_inventariado_de_tu_negocio">
+        ScanBarApp its an app that makes it easier for you to carry out your businesses\'s inventory.</string>
+    <string name="producto">Product</string>
+    <string name="nombre_del_producto">Product Name</string>
+    <string name="descripci_n">Description</string>
+    <string name="descripci_n_del_producto">Product Description</string>
+    <string name="presentaci_n">Type</string>
+    <string name="presentaci_n_del_producto">Product Type</string>
+    <string name="compra">Purchase</string>
+    <string name="precio_de_compra">Purchase Price</string>
+    <string name="venta">Sale</string>
+    <string name="precio_de_venta">Sale Price</string>
+    <string name="cantidad">Quantity</string>
+    <string name="n_mero">Number</string>
+    <string name="escanear_c_digo_de_barras">Scan Barcode</string>
+    <string name="cantidad_del_producto">Product Quantity</string>
+    <string name="detalles_del_producto">Product Details</string>
+    <string name="agregar_producto">Product Added</string>
+    <string name="campos_faltantes">Missing Fields</string>
+    <string name="pesta_a_registro">Pestaña Registro</string>
+    <string name="registrarse">Registrarse</string>
+</resources>
