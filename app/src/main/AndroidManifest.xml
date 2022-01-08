@@ -15,12 +15,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScanBarApp">
         <activity
-            android:name=".Vista.RegistrationActivity"
+            android:name=".Vista.ScanItemStateActivity"
             android:exported="true" />
         <activity
+            android:name=".Vista.DetailedProductActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Vista.ViewInventoryActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Vista.ScanItemActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Vista.RegistrationActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name=".Vista.DelItemActivity"
-            android:exported="true" />
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Controlador.ScanCodeActivity" />
+        <activity android:name=".Controlador.ScanCodeActivityDel" />
+        <activity android:name=".Controlador.ScanCodeActivitysearch" />
         <activity
             android:name=".Vista.AddItemActivity"
             android:configChanges="screenSize|orientation"

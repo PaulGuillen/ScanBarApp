@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_list_product"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/product_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:fontFamily="@font/klee_regular"
+            android:hint="@string/escanear_c_digo_de_barras"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/product_barname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:fontFamily="@font/klee_regular"
+            android:hint="@string/nombre_del_producto"
+            android:inputType="none"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/product_barprice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:fontFamily="@font/klee_regular"
+            android:hint="@string/precio_de_compra"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/product_barpresentation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:fontFamily="@font/klee_regular"
+            android:hint="@string/presentaci_n"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:paddingTop="3dp"
+            android:id="@+id/product_bartotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/klee_regular"
+            android:hint="@string/cantidad_del_producto"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

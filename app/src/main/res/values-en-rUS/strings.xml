@@ -36,6 +36,34 @@
     <string name="detalles_del_producto">Product Details</string>
     <string name="agregar_producto">Product Added</string>
     <string name="campos_faltantes">Missing Fields</string>
-    <string name="pesta_a_registro">Pestaña Registro</string>
-    <string name="registrarse">Registrarse</string>
+    <string name="pesta_a_registro">Register View</string>
+    <string name="registrarse">Sign Up</string>
+    <string name="usar_tus_credenciales_de_autenticaci_n_facilitar_n_el_acceso_a_nuestras_distintas_plataformas">
+        Using your authentication credentials will facilitate access to our different platforms.</string>
+    <string name="nombre">Name</string>
+    <string name="campo_nombre">Empty Name</string>
+    <string name="campo_correo">Empty Email</string>
+    <string name="campo_contraseña">Empty Password</string>
+    <string name="contraseña_importante">Password must be 6 characters</string>
+    <string name="registro_exitoso">Successful registration</string>
+    <string name="inicio_sesion_exitoso">Sign In Sucessfully</string>
+    <string name="sesion_finalizada">Session Ended</string>
+    <string name="producto_borrado">Product Deleted</string>
+    <string name="falta_codigo_barras">Missing Bar Code</string>
+    <string name="estas_seguro">Are you Sure?</string>
+    <string name="_0">0</string>
+    <string name="fecha_de_registro">Registration Date</string>
+    <string name="s">S/.</string>
+    <string name="_10">10</string>
+    <string name="mensaje_datos_pro">Remember that when updating the data it will be the original, not the backup.</string>
+    <string name="datos_del_producto">Product Details</string>
+    <string name="precio_unitario">Unit Price</string>
+    <string name="precio_de_empaque">Packaging Price</string>
+    <string name="enviar_datos">Send Data</string>
+    <string name="estado_del_producto">Product Status</string>
+    <string name="disponible">Available</string>
+    <string name="no_disponible">No Available</string>
+    <string name="guardar">Save</string>
+    <string name="cancelar">Cancel</string>
+    <string name="producto_update">Upgraded Product</string>
 </resources>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/escanear_c_digo_de_barras"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/inventory_barcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/nombre_del_producto"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+
+
+            <TextView
+                android:id="@+id/iventory_barname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/fecha_de_registro"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+
+
+
+            <TextView
+                android:id="@+id/inventory_bardate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/klee_regular"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.90"
+                android:fontFamily="@font/klee_regular"
+                android:gravity="center"
+                android:hint="@string/presentaci_n"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/inventory_barpresentation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/klee_regular"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.90"
+                android:fontFamily="@font/klee_regular"
+                android:gravity="center"
+                android:hint="@string/cantidad_del_producto"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/inventory_bartotal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/klee_regular"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:ignore="UselessParent">
+
+            <View
+                android:paddingStart="1dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/precio_de_compra"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/s"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/inventory_barpurchase"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/klee_regular"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:hint="@string/_10"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/precio_de_venta"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:fontFamily="@font/klee_regular"
+                android:hint="@string/s"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/inventory_barprice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/klee_regular"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:textSize="16sp"
+                android:hint="@string/_10"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_weight="0.015"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/inventory_packaging"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/klee_regular"
+            tools:ignore="TextContrastCheck" />
+
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/inventory_time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/klee_regular"
+            tools:ignore="TextContrastCheck" />
+
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/inventory_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/klee_regular"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

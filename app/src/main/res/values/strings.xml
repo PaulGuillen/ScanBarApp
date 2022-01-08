@@ -28,7 +28,7 @@
     <string name="compra">Compra</string>
     <string name="precio_de_compra">Precio de Compra</string>
     <string name="venta">Venta</string>
-    <string name="precio_de_venta">Precio de Venta</string>
+    <string name="precio_de_venta">Precio Unitario</string>
     <string name="cantidad">Cantidad</string>
     <string name="n_mero">Número</string>
     <string name="escanear_c_digo_de_barras">Código de Barras</string>
@@ -38,4 +38,33 @@
     <string name="campos_faltantes">Campos vacíos</string>
     <string name="pesta_a_registro">Pestaña Registro</string>
     <string name="registrarse">Registrarse</string>
+    <string name="usar_tus_credenciales_de_autenticaci_n_facilitar_n_el_acceso_a_nuestras_distintas_plataformas">Usar tus credenciales de autenticación facilitarán el acceso a nuestras distintas plataformas.</string>
+    <string name="nombre">Nombre</string>
+    <string name="campo_nombre">Nombre vacío</string>
+    <string name="campo_correo">Correo vacío</string>
+    <string name="campo_contraseña">Contraseña vacío</string>
+    <string name="contraseña_importante">Contraseña debe ser de 6 caractéres</string>
+    <string name="registro_exitoso">Registro Exitoso</string>
+    <string name="inicio_sesion_exitoso">Inicio de Sesión Exitoso</string>
+    <string name="sesion_finalizada">Sesión Finalizada</string>
+    <string name="producto_borrado">Producto Borrado</string>
+    <string name="falta_codigo_barras">Falta Codigo de Barras</string>
+    <string name="estas_seguro">Estas Seguro?</string>
+    <string name="_0">0</string>
+    <string name="fecha_de_registro">Fecha de Registro</string>
+    <string name="s">S/.</string>
+    <string name="_10">10</string>
+    <string name="mensaje_datos_pro">Recuerda que al momento de actualizar los datos serán los originales, no los de respaldo.</string>
+    <string name="datos_del_producto">Datos del Producto</string>
+    <string name="precio_unitario">Precio Unitario</string>
+    <string name="precio_de_empaque">Precio de Empaque</string>
+    <string name="enviar_datos">Enviar Datos</string>
+    <string name="estado_del_producto">Estado del Producto</string>
+    <string name="disponible">Disponible</string>
+    <string name="no_disponible">No Disponible</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="producto_update">Producto Actualizado</string>
+
+
 </resources>

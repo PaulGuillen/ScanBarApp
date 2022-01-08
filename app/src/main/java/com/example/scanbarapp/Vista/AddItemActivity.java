@@ -5,37 +5,57 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.scanbarapp.Controlador.ScanCodeActivity;
-import com.example.scanbarapp.MainActivity;
+import com.example.scanbarapp.Modelo.Product;
 import com.example.scanbarapp.R;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class AddItemActivity extends AppCompatActivity {
 
     private FirebaseFirestore firestore;
     @SuppressLint("StaticFieldLeak")
     public static EditText ScanPro;
-    EditText NamePro,DescripPro,TypePro,PurchPro,SellPro,QuantPro;
+    TextInputEditText NamePro , DescripPro, TypePro, PurchPro, SellPro, QuantPro, PackPro ;
+    private FirebaseAuth auth;
+    private DatabaseReference db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +64,8 @@ public class AddItemActivity extends AppCompatActivity {
 
 
         firestore = FirebaseFirestore.getInstance();
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+        db = FirebaseDatabase.getInstance().getReference();
+        auth = FirebaseAuth.getInstance();
 
         NamePro = findViewById(R.id.product_name);
         DescripPro = findViewById(R.id.product_description);
@@ -53,8 +74,10 @@ public class AddItemActivity extends AppCompatActivity {
         SellPro = findViewById(R.id.product_sell);
         QuantPro = findViewById(R.id.product_quantity);
         ScanPro = findViewById(R.id.product_scanbar);
+        PackPro = findViewById(R.id.product_price_box);
 
-        Button ScanBarCode = findViewById(R.id.btn_escanear);
+
+        ImageButton ScanBarCode = findViewById(R.id.btn_escanear);
         ScanBarCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,26 +85,18 @@ public class AddItemActivity extends AppCompatActivity {
             }
         });
 
-        String NameProduct = NamePro.getText().toString();
-        String DesProduct = DescripPro.getText().toString();
-        String TypProduct = TypePro.getText().toString();
-        String PurchProduct = PurchPro.getText().toString();
-        String SellProduct = SellPro.getText().toString();
-        String QuanProduct = QuantPro.getText().toString();
-        String ScanProduct = ScanPro.getText().toString();
-
         CardView AddItem = findViewById(R.id.addItem);
         AddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(NameProduct) || TextUtils.isEmpty(DesProduct) || TextUtils.isEmpty(TypProduct) || TextUtils.isEmpty(PurchProduct) ||
-                        TextUtils.isEmpty(SellProduct) || TextUtils.isEmpty(QuanProduct) || TextUtils.isEmpty(ScanProduct)){
+                if (NamePro.getText().toString().isEmpty() || DescripPro.getText().toString().isEmpty() || TypePro.getText().toString().isEmpty()
+                        || PurchPro.getText().toString().isEmpty() || SellPro.getText().toString().isEmpty() || QuantPro.getText().toString().isEmpty()
+                        || ScanPro.getText().toString().isEmpty()) {
                     Snackbar.make(v, R.string.campos_faltantes, Snackbar.LENGTH_LONG)
                             .show();
-                }else{
+                } else {
                     AddToDatabase();
                 }
-
 
             }
         });
@@ -90,8 +105,8 @@ public class AddItemActivity extends AppCompatActivity {
         BackToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (AddItemActivity.this, DashboardActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(AddItemActivity.this, DashboardActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
 
@@ -101,8 +116,14 @@ public class AddItemActivity extends AppCompatActivity {
 
     }
 
-    private void AddToDatabase(){
-        String saveCurrentDate , saveCurrentTime;
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+    private void AddToDatabase() {
+        String saveCurrentDate, saveCurrentTime;
         Calendar calForDate = Calendar.getInstance();
 
         @SuppressLint("SimpleDateFormat") SimpleDateFormat currentDate = new SimpleDateFormat("MM dd, yyyy");
@@ -111,26 +132,53 @@ public class AddItemActivity extends AppCompatActivity {
         @SuppressLint("SimpleDateFormat") SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
-        final HashMap<String,Object> cartMap = new HashMap<>();
-        cartMap.put("productName",NamePro.getText().toString());
-        cartMap.put("productDescription",DescripPro.getText().toString());
-        cartMap.put("productType",TypePro.getText().toString());
-        cartMap.put("productPurchase",PurchPro.getText().toString());
-        cartMap.put("productSell",SellPro.getText().toString());
-        cartMap.put("productQuantity",QuantPro.getText().toString());
-        cartMap.put("ProductScanNumber",ScanPro.getText().toString());
-        cartMap.put("currentDate",saveCurrentDate);
-        cartMap.put("currentTime",saveCurrentTime);
+
+        String scannumberpro = ScanPro.getText().toString().trim();
+        String descripro = DescripPro.getText().toString();
+        String namepro = NamePro.getText().toString();
+        String purchasepro =PurchPro.getText().toString() ;
+        String quantitypro = QuantPro.getText().toString();
+        String sellpro = SellPro.getText().toString();
+        String typepro = TypePro.getText().toString();
+        float packpro = Float.parseFloat(PackPro.getText().toString());
+
+        Product product = new Product(scannumberpro,descripro,namepro,purchasepro,quantitypro,sellpro,typepro,saveCurrentDate,saveCurrentTime,
+                packpro);
+
+        firestore.collection("ProductsSaved").document(Objects.requireNonNull(auth.getCurrentUser()).getUid()).collection("Products")
+                .document(scannumberpro)
+                .set(product)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        new SweetAlertDialog(AddItemActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText(R.string.agregar_producto).show();
+                        CleanInputs();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(AddItemActivity.this, "Error" + e, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        //BackUpInformationTOUSE
+        db.child("BackUp").child(Objects.requireNonNull(auth.getCurrentUser()).getUid()).child("Product").child(scannumberpro)
+                .setValue(product);
 
 
-        firestore.collection("ProductsSaved")
-                .add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(AddItemActivity.this, R.string.agregar_producto, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
+    private void CleanInputs(){
+        NamePro.setText("");
+        DescripPro.setText("");
+        TypePro.setText("");
+        PurchPro.setText("");
+        SellPro.setText("");
+        QuantPro.setText("");
+        ScanPro.setText("");
+        PackPro.setText("");
+    }
 
 }

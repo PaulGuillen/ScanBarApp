@@ -14,32 +14,31 @@
         <LinearLayout
             android:id="@+id/text_view_add_item"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/back_to_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
                 android:background="@drawable/ic_baseline_arrow_back_24_black"
                 android:contentDescription="@string/todo"
-                android:foregroundGravity="left"
-            />
+                android:foregroundGravity="left" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/klee_regular"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:text="@string/agregar_nproducto"
                 android:textAlignment="center"
                 android:textSize="25sp"
-                android:layout_marginEnd="10dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,188 +48,196 @@
         </LinearLayout>
 
 
-
         <LinearLayout
             android:id="@+id/linearlayout_producto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_add_item">
 
-            <TextView
-                android:layout_width="0dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/producto"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                app:boxBackgroundMode="outline">
 
-            <EditText
-                android:id="@+id/product_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/nombre_del_producto"
-                android:importantForAutofill="no"
-                android:inputType="none"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:hint="@string/nombre_del_producto" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/linearlayout_detalle"
+            android:id="@+id/linearlayout_descripcion_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearlayout_producto">
 
-            <TextView
-                android:layout_width="0dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/descripci_n"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                app:boxBackgroundMode="outline">
 
-            <EditText
-                android:id="@+id/product_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/descripci_n_del_producto"
-                android:importantForAutofill="no"
-                android:inputType="none"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:hint="@string/descripci_n_del_producto" />
 
-        </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:id="@+id/linearlayout_presentacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_detalle">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/presentaci_n"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
-
-            <EditText
-                android:id="@+id/product_type"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/presentaci_n_del_producto"
-                android:importantForAutofill="no"
-                android:inputType="none"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/linearlayout_compra"
+            android:id="@+id/linearlayout_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_presentacion">
+            app:layout_constraintTop_toBottomOf="@id/linearlayout_descripcion_product"
+            android:baselineAligned="false">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/compra"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
-
-            <EditText
-                android:id="@+id/product_purchase"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/precio_de_compra"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:hint="@string/presentaci_n" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:hint="@string/cantidad_del_producto"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/linearlayout_venta"
+            android:id="@+id/linearlayout_entradas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_compra">
+            app:layout_constraintTop_toBottomOf="@id/linearlayout_type"
+            android:baselineAligned="false">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/venta"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/product_sell"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/precio_de_venta"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/precio_de_venta"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:boxBackgroundMode="outline">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:hint="@string/precio_de_compra"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
+
         <LinearLayout
-            android:id="@+id/linearlayout_cantidad"
+            android:id="@+id/linearlayout_precios_disa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_venta">
+            app:layout_constraintTop_toBottomOf="@id/linearlayout_entradas"
+            android:baselineAligned="false">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/cantidad"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/product_quantity"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/cantidad_del_producto"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_price_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/precio_de_empaque"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
         </LinearLayout>
 
@@ -238,65 +245,53 @@
             android:id="@+id/linearlayout_codigobarras"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_cantidad">
+            app:layout_constraintTop_toBottomOf="@id/linearlayout_precios_disa">
 
-            <TextView
+            <ImageButton
+                android:id="@+id/btn_escanear"
+                android:background="@drawable/ic_baseline_camera_alt_24"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:contentDescription="@string/todo"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/n_mero"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                android:layout_weight="0.88"
+                app:boxBackgroundMode="outline">
 
-            <EditText
-                android:id="@+id/product_scanbar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/escanear_c_digo_de_barras"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_scanbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/escanear_c_digo_de_barras"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-
-
-        <Button
-            android:id="@+id/btn_escanear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/btn_logout"
-            android:fontFamily="@font/klee_regular"
-            android:text="@string/escanear_c_digo_de_barras"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/addItem"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_codigobarras"
-            tools:ignore="TextContrastCheck" />
-
-
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/addItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            android:layout_margin="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_codigobarras">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -312,8 +307,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/circlebackgroundpurple"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_baseline_add_24"
-                   />
+                    android:src="@drawable/ic_baseline_add_24" />
 
                 <TextView
                     android:layout_width="wrap_content"

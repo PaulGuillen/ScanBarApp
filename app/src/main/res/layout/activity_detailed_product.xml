@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true"
+    tools:context=".Vista.RegistrationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/back_to_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/ic_baseline_arrow_back_24_black"
+                        android:contentDescription="@string/todo"
+                        android:foregroundGravity="left"
+                        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+                    <TextView
+                        android:gravity="center_vertical|end"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/muli"
+                        android:id="@+id/Dateproduct"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginEnd="120dp"
+                    android:background="@drawable/book"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/klee_regular"
+                    android:text="@string/datos_del_producto"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:hint="@string/escanear_c_digo_de_barras"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat,TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/Scanbarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="none"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:hint="@string/nombre_del_producto"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat,TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/NameProduct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.7"
+                        android:autofillHints="none"
+                        android:background="@drawable/edtitext_detailed_product"
+                        android:fontFamily="@font/klee_regular"
+                        android:inputType="textEmailAddress"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:hint="@string/precio_de_venta"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat,TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/Sellproduct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:autofillHints="none"
+                        android:background="@drawable/edtitext_detailed_product"
+                        android:gravity="center"
+                        android:fontFamily="@font/klee_regular"
+                        android:inputType="date"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:hint="@string/presentaci_n_del_producto"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat,TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/Typeproduct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:autofillHints="none"
+                        android:gravity="center"
+                        android:background="@drawable/edtitext_detailed_product"
+                        android:fontFamily="@font/klee_regular"
+                        android:inputType="text"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:fontFamily="@font/klee_regular"
+                    android:gravity="center"
+                    android:hint="@string/cantidad_del_producto"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat,TextContrastCheck" />
+
+
+                <EditText
+                    android:id="@+id/Quantityproduct"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7 "
+                    android:autofillHints="none"
+                    android:background="@drawable/edtitext_detailed_product"
+                    android:fontFamily="@font/klee_regular"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:fontFamily="@font/klee_regular"
+                    android:gravity="center"
+                    android:hint="@string/precio_de_compra"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat,TextContrastCheck" />
+
+
+                <EditText
+                    android:id="@+id/Purchaseproduct"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:autofillHints="none"
+                    android:background="@drawable/edtitext_detailed_product"
+                    android:fontFamily="@font/klee_regular"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:hint="@string/precio_de_empaque"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat,TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/PackagingProduct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:autofillHints="none"
+                        android:background="@drawable/edtitext_detailed_product"
+                        android:fontFamily="@font/klee_regular"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+
+
+
+                <Button
+                    android:id="@+id/btn_enviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/btn_logout"
+                    android:fontFamily="@font/klee_regular"
+                    android:text="@string/enviar_datos"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.050"
+                        android:background="@drawable/ic_baseline_error_outline_24"
+                        android:contentDescription="@string/todo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.6"
+                        android:fontFamily="@font/muli"
+                        android:gravity="center"
+                        android:text="@string/mensaje_datos_pro"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

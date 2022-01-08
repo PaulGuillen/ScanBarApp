@@ -23,8 +23,8 @@
 
             <ImageButton
                 android:id="@+id/back_to_home"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_margin="10dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="0dp"
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/klee_regular"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:text="@string/borrar_nproducto"
                 android:textAlignment="center"
                 android:textSize="25sp"
@@ -54,64 +54,53 @@
             android:id="@+id/linearlayout_codigobarras"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_delete_item">
 
-            <TextView
+            <ImageButton
+                android:id="@+id/btn_escanear"
+                android:background="@drawable/ic_baseline_camera_alt_24"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:hint="@string/n_mero"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription" />
 
-            <EditText
-                android:id="@+id/product_scanbar"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/escanear_c_digo_de_barras"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                android:layout_weight="0.88"
+                app:boxBackgroundMode="outline">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_scanbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/escanear_c_digo_de_barras"
+                    android:fontFamily="@font/muli"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/btn_escanear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/btn_logout"
-            android:fontFamily="@font/klee_regular"
-            android:text="@string/escanear_c_digo_de_barras"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/addItem"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TextContrastCheck" />
-
-
-
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/addItem"
+            android:id="@+id/deleteItems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="100dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -126,8 +115,8 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/circlebackgroundyellow"
-                    android:src="@drawable/ic_baseline_delete_24"
                     android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_baseline_delete_24"
                     tools:ignore="ImageContrastCheck" />
 
                 <TextView

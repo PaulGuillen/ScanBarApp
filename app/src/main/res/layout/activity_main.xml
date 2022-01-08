@@ -111,7 +111,7 @@
             app:layout_constraintTop_toBottomOf="@id/linearlayout_email">
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -128,7 +128,7 @@
 
         </LinearLayout>
 
-        <TextView
+     <!--   <TextView
             android:id="@+id/contraseña_olvidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,20 +142,22 @@
             app:layout_constraintBottom_toTopOf="@+id/linearlayout_buttons"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearlayout_password" />
+            app:layout_constraintTop_toBottomOf="@id/linearlayout_password" /> -->
 
         <LinearLayout
             android:id="@+id/linearlayout_buttons"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_password">
 
             <Button
                 android:id="@+id/registrar_usuario"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
@@ -170,6 +172,7 @@
 
             <Button
                 android:id="@+id/iniciar_sesion"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
