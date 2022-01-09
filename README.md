@@ -51,6 +51,3 @@ Aca podran ver el inventario completo, ademas de que le agrege la opcion itemcli
 </p>
 
 * Hecho por Paul Guillen Acuña
-* Gracias
-
-
