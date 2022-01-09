@@ -7,7 +7,6 @@ ademas de poder buscar tus productos solo enfocando con la camara el codigo de b
 ````
                Firebase(Database, Cloud , Autenthicacion), Android Studio, AdobeXd, Java, MVC
 ````
-
 ---------------------------------------------------------------------------------------------------------------------
 
 ### Capturas de Pantalla Principal
@@ -44,14 +43,14 @@ Son algunas fotos tomadas desde un dispositivo fisico.
 ---------------------------------------------------------------------------------------------------------------------
 
 ### Inventario Completo
+
+Aca podran ver el inventario completo, ademas de que le agrege la opcion itemclicklistener para que en un futuro se pueda agregar facturacion.
+
 <p align="center">
-	
-		Aca podran ver el inventario completo, ademas de que le agrege la opcion itemclicklistener para que en un futuro se pueda agregar facturacion.	
-	
-		<img src="https://i.postimg.cc/Z0kKMJrs/inventario-completo.png" >
+<img src="https://i.postimg.cc/Z0kKMJrs/inventario-completo.png" >
 </p>
 
-Hecho por Paul Guillen Acuña
-Gracias
+* Hecho por Paul Guillen Acuña
+* Gracias
 
 
