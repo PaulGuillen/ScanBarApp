@@ -50,7 +50,7 @@ Aca podran ver el inventario completo, ademas de que le agrege la opcion itemcli
 <img src="https://i.postimg.cc/Z0kKMJrs/inventario-completo.png" >
 </p>
 
-## Autores ✒️
+## Autor ✒️
 
 * **Paul Guillen Acuña** - *Mi Repositorio* - [PaulGuillen](https://github.com/PaulGuillen?tab=repositories)
 
