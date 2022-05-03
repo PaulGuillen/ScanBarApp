@@ -48,7 +48,7 @@ Son algunas fotos tomadas desde un dispositivo fisico.
 
 ### Inventario Completo
 
-Aca podran ver el inventario completo, ademas de que le agrege la opcion itemclicklistener para que en un futuro se pueda agregar facturacion.
+Aca podrán ver el inventario completo, además de que le agrege la opcion itemclicklistener para que en un futuro se pueda agregar facturacion.
 
 <p align="center">
 <img src="https://i.postimg.cc/Z0kKMJrs/inventario-completo.png" >
