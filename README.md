@@ -1,7 +1,7 @@
  ## ScanBarApp
 * Este proyecto con fines educativos, fue realizado en Firebase (Autenthication , Databasee y Firestore) , con el lenguaje de programación java.
 
-* La idea principal de este proyecto es tener control de tus productos de tu negocio, claramente usando el codigo de barras de cada uno de estsos productos,
+* La idea principal de este proyecto es tener control de tus productos de tu negocio, claramente usando el codigo de barras de cada uno de estos productos,
 ademas de poder buscar tus productos solo enfocando con la cámara el codigo de barras.
 
 ````
@@ -10,6 +10,8 @@ ademas de poder buscar tus productos solo enfocando con la cámara el codigo de 
 ---------------------------------------------------------------------------------------------------------------------
 
 ### Capturas de Pantalla Principal
+
+_Pestañas principales de las vistas_
 
 <p align="center">
   <img src="https://i.postimg.cc/SQn63V6c/login.png)](https://postimg.cc/XX0ByfDv"/>
@@ -20,6 +22,8 @@ ademas de poder buscar tus productos solo enfocando con la cámara el codigo de 
 ---------------------------------------------------------------------------------------------------------------------
 
 ### CRUD (Create , Read, Update, Delete)
+
+_Pestañas principales de las vistas_
 
 <p align="center">
   <img src="https://i.postimg.cc/6pJyHfc6/agregar-producto.png"/>
