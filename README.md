@@ -1,5 +1,5 @@
  ## ScanBarApp
-* Este proyecto con fines educativos, fue realizado en Firebase (Autenthication , Databae y Cloud) , con el lenguaje de programación java.
+* Este proyecto con fines educativos, fue realizado en Firebase (Autenthication , Databasee y Firestore) , con el lenguaje de programación java.
 
 * La idea principal de este proyecto es tener control de tus productos de tu negocio, claramente usando el codigo de barras de cada uno de estsos productos,
 ademas de poder buscar tus productos solo enfocando con la camara el codigo de barras.
